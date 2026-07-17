@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CatchID Data Deletion</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f7faf9;
+      --surface: #ffffff;
+      --text: #15302f;
+      --muted: #516968;
+      --accent: #0f766e;
+      --border: #d8e4e2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      padding: 32px 18px 56px;
+    }
+
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: clamp(22px, 5vw, 48px);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      letter-spacing: 0;
+      color: #0b4f4a;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      color: #123f3c;
+      margin-top: 38px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      color: var(--accent);
+      margin-top: 24px;
+    }
+
+    p { margin: 14px 0 0; }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 1.35rem;
+    }
+
+    li + li { margin-top: 6px; }
+
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .meta p { margin: 4px 0; }
+
+    .contact {
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #f2f7f6;
+    }
+
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>CatchID Data Deletion</h1>
+
+      <div class="meta">
+        <p><strong>App:</strong> CatchID</p>
+        <p><strong>Package:</strong> com.catchid.app</p>
+        <p><strong>Developer/operator:</strong> Pete Colley</p>
+        <p><strong>Contact:</strong> <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a></p>
+      </div>
+
+      <section>
+        <h2>Deletion Instructions</h2>
+        <p>CatchID does not currently provide user accounts, cloud catch-history storage, subscriptions, or cross-device catch-log synchronisation.</p>
+        <p>Your saved catch-log records remain locally on your Android device. Pete Colley cannot remotely access or delete locally stored catch-log records because they are not stored in a CatchID account or server-side catch database.</p>
+        <p>You can delete local CatchID data by:</p>
+        <ul>
+          <li>delete individual catches inside CatchID;</li>
+          <li>clearing CatchID storage through Android Settings;</li>
+          <li>uninstalling CatchID to remove app-private local data.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Requesting Deletion of Data Processed Outside Your Device</h2>
+        <p>To request deletion of data that may have been processed outside your device, email <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a>.</p>
+        <div class="contact">
+          <p><strong>Suggested subject:</strong> CatchID data deletion request</p>
+          <p>In your message, describe the data or activity concerned and provide an approximate date. Please do not send a fish photograph or other unnecessary sensitive content unless CatchID support specifically asks for it.</p>
+        </div>
+        <p>CatchID can attempt to identify and delete records that are reasonably possible to locate and within CatchID's control, such as support emails you send directly to CatchID and any related operator-controlled records.</p>
+      </section>
+
+      <section>
+        <h2>What Cannot Be Deleted Remotely</h2>
+        <p>Catch records, local photo references, locally generated share-card images, and other app-private data that exist only on your device must be deleted by you using the app or Android storage controls.</p>
+        <p>Gallery photos remain controlled by your selected gallery or document provider. CatchID cannot delete photos from a third-party gallery, document provider, email app, share target, or other app you choose to use.</p>
+      </section>
+
+      <section>
+        <h2>Provider and Security Retention</h2>
+        <p>Some provider or security records may remain temporarily because of operational, abuse-prevention, legal, or service-provider retention requirements. CatchID does not promise immediate deletion of records outside its direct control where provider retention or legal requirements apply.</p>
+        <p>Render application logs are currently documented as available for up to 7 days on the current plan and are intended to contain privacy-safe operational metadata only.</p>
+        <p>OpenAI API request content may be retained for up to 30 days under OpenAI's standard API position for service provision and abuse monitoring, subject to legal and security exceptions, unless a different account setting applies.</p>
+        <p>Firebase Analytics and Crashlytics data retention is controlled through Firebase/Google settings and service behaviour.</p>
+      </section>
+
+      <section>
+        <h2>Privacy Policy</h2>
+        <p>For more detail about CatchID data practices, read the <a href="https://petecolley.github.io/catchid-privacy/">CatchID Privacy Policy</a>.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
