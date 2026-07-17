@@ -15,9 +15,7 @@
       --border: #d8e4e2;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -41,9 +39,7 @@
       padding: clamp(22px, 5vw, 48px);
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       line-height: 1.25;
       margin: 0;
     }
@@ -69,27 +65,21 @@
       margin-top: 24px;
     }
 
-    p {
-      margin: 14px 0 0;
-    }
+    p { margin: 14px 0 0; }
 
     ul {
       margin: 14px 0 0;
       padding-left: 1.35rem;
     }
 
-    li + li {
-      margin-top: 6px;
-    }
+    li + li { margin-top: 6px; }
 
     .meta {
       color: var(--muted);
       margin-bottom: 28px;
     }
 
-    .meta p {
-      margin: 4px 0;
-    }
+    .meta p { margin: 4px 0; }
 
     .contact {
       margin-top: 18px;
@@ -99,9 +89,7 @@
       background: #f2f7f6;
     }
 
-    a {
-      color: var(--accent);
-    }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>
@@ -110,7 +98,8 @@
       <h1>CatchID Privacy Policy</h1>
 
       <div class="meta">
-        <p><strong>Last updated:</strong> July 10, 2026</p>
+        <p><strong>Effective date:</strong> July 14, 2026</p>
+        <p><strong>Last updated:</strong> July 14, 2026</p>
         <p><strong>App name:</strong> CatchID</p>
         <p><strong>Package:</strong> com.catchid.app</p>
         <p><strong>Developer/operator:</strong> Pete Colley</p>
@@ -120,27 +109,26 @@
       <section>
         <h2>1. Overview</h2>
         <p>CatchID helps users identify fish from photographs and keep a personal catch log on their Android device.</p>
-        <p>When you ask CatchID to identify a fish, the app sends the selected or newly captured photograph to the CatchID backend so the identification request can be processed. CatchID also lets you save catch details locally in the app, such as the photo, species result, location text, bait, and weight.</p>
+        <p>When you ask CatchID to identify a fish, the app sends the selected or newly captured photograph to the CatchID backend so the identification request can be processed. CatchID also lets you save catch details locally in the app, such as the photo, species result, date, location text, bait, and weight.</p>
         <p>CatchID does not currently provide user accounts, cloud catch-history storage, subscriptions, or cross-device catch-log synchronisation.</p>
       </section>
 
       <section>
-        <h2>2. Information Processed by CatchID</h2>
-
+        <h2>2. Information You Choose to Provide</h2>
         <h3>Fish Identification Photographs</h3>
-        <p>When you request an identification, a user-selected or newly captured photograph is transmitted securely to the CatchID backend. The backend sends the image and necessary identification instructions to the OpenAI API solely to provide the requested fish identification.</p>
-        <p>The current backend code processes the uploaded image in memory for the request and forwards it to OpenAI. The code does not write uploaded images to a CatchID database, upload folder, or file-storage service after the request completes.</p>
-        <p>CatchID does not intentionally copy photographs, Base64 image data, prompts, or OpenAI provider responses into CatchID application logs.</p>
+        <p>When you request an identification, a user-selected or newly captured photograph is sent securely to the CatchID backend. The backend sends the image and the instructions needed for identification to the OpenAI API so that CatchID can provide the requested result.</p>
+        <p>The current backend code processes uploaded images for the request and does not write uploaded images to a CatchID database, upload folder, or file-storage service after the request completes. OpenAI may retain API inputs and outputs for up to 30 days under its standard API position for service provision and abuse monitoring, unless an exception or different account setting applies.</p>
+        <p>CatchID application logs are designed not to include photographs, Base64 image data, prompts, or raw OpenAI provider responses.</p>
 
         <h3>Saved Catch Information</h3>
-        <p>If you save a catch, the Android app currently stores the catch record locally on your device in app-private storage. Based on the current code, a saved catch record may include:</p>
+        <p>If you save a catch, CatchID stores the catch record locally on your device in app-private storage. A saved catch record may include:</p>
         <ul>
           <li>a generated catch ID;</li>
           <li>the local photo URI used by the app;</li>
           <li>the creation timestamp;</li>
-          <li>location text entered by the user;</li>
-          <li>bait text entered by the user;</li>
-          <li>weight value and weight unit entered by the user;</li>
+          <li>location text entered by you;</li>
+          <li>bait, lure, or fly text entered by you;</li>
+          <li>weight value and weight unit entered by you;</li>
           <li>species name, if one is saved;</li>
           <li>identification source;</li>
           <li>confidence label;</li>
@@ -148,94 +136,104 @@
         </ul>
         <p>CatchID currently has no user account system, no cloud catch-history database, and no cross-device synchronisation. The operator cannot remotely view your locally saved catch log through a CatchID account or server-side catch database.</p>
 
-        <h3>Technical Request Information</h3>
-        <p>The CatchID backend handles privacy-safe technical metadata needed to operate and troubleshoot the service. This may include:</p>
-        <ul>
-          <li>a correlation ID for the request;</li>
-          <li>app version and build number when provided by the app;</li>
-          <li>request outcome;</li>
-          <li>response status;</li>
-          <li>request duration or duration band;</li>
-          <li>provider and model name;</li>
-          <li>safe error category, safe error code, and failure stage.</li>
-        </ul>
-        <p>CatchID application logs must not contain photographs or Base64 image data, exact locations, catch notes, bait or other free text, email addresses, API credentials, prompts, raw OpenAI provider responses, raw request bodies, tokens, or stack traces containing sensitive data.</p>
+        <h3>Sharing and Feedback</h3>
+        <p>If you use Android sharing from CatchID, the app creates a share card and opens the Android share sheet. The content is sent only to the app or service you choose. CatchID does not automatically send shared catch cards to the CatchID backend.</p>
+        <p>If you report a wrong result, CatchID opens an email draft in your chosen email app addressed to CatchID support. The draft may include result details and app version information so you can send feedback. You decide whether to send the email and whether to attach or include any photo.</p>
       </section>
 
       <section>
-        <h2>3. Why the Information Is Used</h2>
-        <p>CatchID uses information for these purposes:</p>
+        <h2>3. Technical and Diagnostic Information</h2>
+        <p>The CatchID backend handles technical metadata needed to operate and troubleshoot the identification service, such as a per-request correlation ID, app version and build number, request outcome, response status, request duration, provider and model name, and safe error information.</p>
+        <p>CatchID backend logs are designed not to include photographs, Base64 image data, exact catch locations, catch notes, bait or other free text, email addresses, API credentials, prompts, raw provider responses, raw request bodies, tokens, or stack traces containing sensitive data.</p>
+      </section>
+
+      <section>
+        <h2>4. Firebase Analytics</h2>
+        <p>CatchID uses Firebase Analytics to understand bounded app usage and feature reliability. Firebase Analytics collection is enabled in release builds.</p>
+        <p>CatchID deliberately sends only typed, bounded app events and parameters, such as identification started, identification completed, identification failed, result viewed, identify-another selected, and save-catch selected.</p>
+        <p>CatchID does not deliberately send fish species names, photographs, image URIs, exact catch locations, bait, weight, notes, email addresses, prompts, raw provider responses, tokens, API keys, arbitrary user identifiers, Firebase user IDs, or Firebase user properties to Firebase Analytics.</p>
+        <p>Firebase Analytics may also automatically process app, device, session, approximate geography, and app-instance information as described by Google. CatchID disables advertising ID collection and ad-personalisation signals in the app manifest and does not use Firebase Analytics for advertising or ad personalisation.</p>
+      </section>
+
+      <section>
+        <h2>5. Firebase Crashlytics</h2>
+        <p>CatchID uses Firebase Crashlytics to receive crash and non-fatal diagnostic reports. Crashlytics collection is enabled in release builds.</p>
+        <p>Crashlytics may collect crash stack traces, relevant application state, device/app metadata, a Crashlytics installation UUID, Firebase installation information, Firebase Sessions quality metadata, and Analytics breadcrumb logs where applicable.</p>
+        <p>CatchID's developer-defined Crashlytics custom keys are limited to bounded diagnostic values: operation, error category, failure stage, safe code, local correlation ID where applicable, backend correlation ID where applicable, app version, and app build.</p>
+        <p>CatchID does not deliberately attach photographs, image URIs, species names, exact catch locations, bait, weight, notes, prompts, raw provider responses, request bodies, tokens, API keys, Firebase user IDs, Firebase user properties, or arbitrary exception messages as Crashlytics custom keys.</p>
+      </section>
+
+      <section>
+        <h2>6. Why Information Is Used</h2>
         <ul>
-          <li>providing fish identification requested by the user;</li>
-          <li>saving and displaying the user's personal catch log locally on the device;</li>
+          <li>providing fish identification requested by you;</li>
+          <li>saving and displaying your personal catch log locally on your device;</li>
+          <li>letting you share a catch card or send feedback when you choose to do so;</li>
           <li>maintaining security and reliability;</li>
           <li>diagnosing technical failures;</li>
+          <li>understanding bounded app usage and app health;</li>
           <li>preventing abuse and managing service performance.</li>
         </ul>
-        <p>CatchID does not use this information for advertising or marketing purposes.</p>
+        <p>CatchID does not sell personal data and does not use collected data for advertising or ad personalisation.</p>
       </section>
 
       <section>
-        <h2>4. Service Providers</h2>
-
+        <h2>7. Service Providers</h2>
         <h3>Render</h3>
-        <p>Render hosts the CatchID backend. The current Render workspace plan is Hobby. Workspace access is limited to the product owner.</p>
-        <p>Render-hosted structured application logs are available for up to 7 days under the current plan. These logs are intended to contain privacy-safe operational metadata only, not photographs, raw request bodies, prompts, provider responses, exact locations, catch notes, bait/free text, email addresses, tokens, or API keys.</p>
-
+        <p>Render hosts the CatchID backend. The backend receives identification requests, calls OpenAI, returns identification results, and writes privacy-safe operational logs.</p>
         <h3>OpenAI</h3>
-        <p>The CatchID backend uses the OpenAI API to process identification images and request content on behalf of CatchID. The API is called only by the backend. The OpenAI API key is kept on the backend and is not included in the Android app.</p>
-        <p>Optional OpenAI API data-sharing and model-improvement settings are disabled for CatchID. Under OpenAI's standard API retention position, API inputs and outputs may be retained for up to 30 days for service provision and abuse monitoring, subject to OpenAI's stated exceptions. API data is not used for model training by default because CatchID has not opted in.</p>
-
-        <h3>Firebase</h3>
-        <p>Firebase Analytics and Firebase Crashlytics are integrated into the CatchID codebase, but production release-build collection is currently disabled. Debug-build verification data is used only for development testing and is not part of the public production app.</p>
-        <p>This policy does not describe production Firebase Analytics or Crashlytics collection as active.</p>
+        <p>The CatchID backend uses the OpenAI API to process identification images and request content on behalf of CatchID. The OpenAI API key is kept on the backend and is not included in the Android app. OpenAI states that API inputs and outputs may be retained for up to 30 days to provide services and identify abuse, and that API data is not used for model training by default unless a customer opts in.</p>
+        <h3>Firebase / Google</h3>
+        <p>CatchID uses Firebase Analytics and Firebase Crashlytics for bounded analytics and diagnostics. Firebase may process automatic SDK data needed to provide these services.</p>
+        <h3>Android Platform and Selected Apps</h3>
+        <p>CatchID uses Android system features such as the camera, document picker, app-private storage, browser intent for the privacy policy, email intent for feedback, and share sheet for sharing. If you choose a third-party app from Android's share sheet or email chooser, that app handles the content under its own terms and privacy policy.</p>
       </section>
 
       <section>
-        <h2>5. Data Retention</h2>
-        <p>Catch records remain on your device until you delete them in CatchID or remove locally stored app data through Android's application storage controls. CatchID does not maintain a server-side database of users' catch histories.</p>
-        <p>The current Android manifest sets app backup off, but a full Android backup-rule audit has not been completed. This policy therefore does not make an absolute claim about uninstall behaviour or device backup behaviour.</p>
-        <p>Render application logs are available for up to 7 days under the current Render plan.</p>
-        <p>OpenAI API request content may be retained for up to 30 days under the standard API position for service provision and abuse monitoring, subject to legal and security exceptions.</p>
-        <p>Firebase production Analytics and Crashlytics collection is currently disabled.</p>
+        <h2>8. Data Retention</h2>
+        <p>Saved catch records remain on your device until you delete them in CatchID, clear CatchID app data, uninstall the app, or Android otherwise removes the app data. CatchID does not maintain a server-side database of users' catch histories.</p>
+        <p>Camera photos captured through CatchID may remain in the app's private files area. Share-card images are generated in the app cache. Gallery photos remain controlled by your selected gallery or document provider; CatchID stores the URI string and retained permission where applicable.</p>
+        <p>Render application logs are currently documented as available for up to 7 days on the current plan and are intended to contain privacy-safe operational metadata only.</p>
+        <p>OpenAI API request content may be retained for up to 30 days under OpenAI's standard API position for service provision and abuse monitoring, subject to legal and security exceptions, unless a different account setting applies.</p>
+        <p>Firebase Analytics and Crashlytics data retention is controlled through Firebase/Google settings and service behaviour.</p>
       </section>
 
       <section>
-        <h2>6. Deletion and User Control</h2>
+        <h2>9. Deletion and User Control</h2>
         <p>You can delete individual catches inside CatchID. You can also remove CatchID's locally stored data using Android's application storage controls.</p>
         <p>CatchID currently has no user account to delete. Because catch records are stored locally on your device, the operator cannot remotely view or delete those records from your device.</p>
-        <p>You may contact <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a> with privacy questions. Some transient or security records may be handled by service providers such as Render or OpenAI under their own retention policies, and CatchID cannot promise deletion outside its control where provider retention, security, or legal requirements apply.</p>
+        <p>You may contact <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a> with privacy questions or deletion requests for data that CatchID or its service providers may process. Some provider records may be retained for security, abuse prevention, legal, or service-operation reasons, and CatchID cannot promise deletion outside its control where provider retention or legal requirements apply.</p>
       </section>
 
       <section>
-        <h2>7. Security</h2>
-        <p>CatchID uses HTTPS/TLS transmission for identification requests. API credentials are kept on the backend rather than in the Android app. Access to service dashboards is restricted. CatchID uses privacy-safe structured logging rules to reduce the chance that sensitive content is copied into logs.</p>
+        <h2>10. Security</h2>
+        <p>CatchID uses HTTPS/TLS for identification requests to the backend. The backend calls OpenAI over HTTPS. Firebase states that listed Firebase Android SDK end-user data is encrypted in transit using HTTPS. API credentials are kept on the backend rather than in the Android app.</p>
         <p>No system can be guaranteed completely secure.</p>
       </section>
 
       <section>
-        <h2>8. Data Sharing</h2>
+        <h2>11. Data Sharing</h2>
         <p>CatchID does not sell personal data.</p>
-        <p>Information is supplied only to service providers needed to operate the identification service, maintain reliability, prevent abuse, or meet legal obligations. These providers are not used by CatchID to independently market to users.</p>
+        <p>CatchID provides information to service providers needed to operate the app, process identification requests, maintain reliability, prevent abuse, and meet legal obligations. These providers are not used by CatchID to independently market to users.</p>
       </section>
 
       <section>
-        <h2>9. International Processing</h2>
-        <p>CatchID's service providers may process information in countries outside your own country. Processing by those providers is subject to their contractual and legal safeguards. CatchID does not list specific hosting or processing regions for every provider in this policy.</p>
-      </section>
-
-      <section>
-        <h2>10. Children</h2>
+        <h2>12. Children</h2>
         <p>CatchID is not specifically directed at children.</p>
       </section>
 
       <section>
-        <h2>11. Changes to This Policy</h2>
+        <h2>13. International Processing</h2>
+        <p>CatchID's service providers may process information in countries outside your own country. Processing by those providers is subject to their contractual and legal safeguards. Specific provider processing regions have not all been confirmed.</p>
+      </section>
+
+      <section>
+        <h2>14. Changes to This Policy</h2>
         <p>CatchID may update this policy when the app, service providers, data practices, or legal requirements change. The "Last updated" date will be changed when the policy is updated.</p>
       </section>
 
       <section>
-        <h2>12. Contact</h2>
+        <h2>15. Contact</h2>
         <div class="contact">
           <p>For privacy questions, contact:</p>
           <p><strong>Pete Colley</strong><br>
