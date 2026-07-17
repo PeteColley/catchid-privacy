@@ -99,7 +99,7 @@
 
       <div class="meta">
         <p><strong>Effective date:</strong> July 14, 2026</p>
-        <p><strong>Last updated:</strong> July 14, 2026</p>
+        <p><strong>Last updated:</strong> July 17, 2026</p>
         <p><strong>App name:</strong> CatchID</p>
         <p><strong>Package:</strong> com.catchid.app</p>
         <p><strong>Developer/operator:</strong> Pete Colley</p>
@@ -117,7 +117,7 @@
         <h2>2. Information You Choose to Provide</h2>
         <h3>Fish Identification Photographs</h3>
         <p>When you request an identification, a user-selected or newly captured photograph is sent securely to the CatchID backend. The backend sends the image and the instructions needed for identification to the OpenAI API so that CatchID can provide the requested result.</p>
-        <p>The current backend code processes uploaded images for the request and does not write uploaded images to a CatchID database, upload folder, or file-storage service after the request completes. OpenAI may retain API inputs and outputs for up to 30 days under its standard API position for service provision and abuse monitoring, unless an exception or different account setting applies.</p>
+        <p>The current backend code processes uploaded images for the request and does not write uploaded images to a CatchID database, upload folder, or file-storage service after the request completes. CatchID explicitly sends <code>store: false</code> on OpenAI Responses API requests, does not use background responses or persistent OpenAI objects, and does not store or log OpenAI response IDs. OpenAI standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <p>CatchID application logs are designed not to include photographs, Base64 image data, prompts, or raw OpenAI provider responses.</p>
 
         <h3>Saved Catch Information</h3>
@@ -180,9 +180,9 @@
       <section>
         <h2>7. Service Providers</h2>
         <h3>Render</h3>
-        <p>Render hosts the CatchID backend. The backend receives identification requests, calls OpenAI, returns identification results, and writes privacy-safe operational logs.</p>
+        <p>Render hosts the CatchID backend in Virginia, US East. The backend receives identification requests, calls OpenAI, returns identification results, and writes privacy-safe operational logs. The Render workspace plan is Hobby, the service instance is Free, dashboard logs are retained for 7 days, and no external Render log or metrics streams are configured.</p>
         <h3>OpenAI</h3>
-        <p>The CatchID backend uses the OpenAI API to process identification images and request content on behalf of CatchID. The OpenAI API key is kept on the backend and is not included in the Android app. OpenAI states that API inputs and outputs may be retained for up to 30 days to provide services and identify abuse, and that API data is not used for model training by default unless a customer opts in.</p>
+        <p>The CatchID backend uses the OpenAI API to process identification images and request content on behalf of CatchID. The OpenAI API key is kept on the backend and is not included in the Android app. OpenAI model-feedback sharing, evaluation/fine-tuning sharing, and API input/output sharing are disabled for CatchID. CatchID explicitly sends <code>store: false</code> on OpenAI Responses API requests and does not claim Zero Data Retention. Standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <h3>Firebase / Google</h3>
         <p>CatchID uses Firebase Analytics and Firebase Crashlytics for bounded analytics and diagnostics. Firebase may process automatic SDK data needed to provide these services.</p>
         <h3>Android Platform and Selected Apps</h3>
@@ -193,8 +193,8 @@
         <h2>8. Data Retention</h2>
         <p>Saved catch records remain on your device until you delete them in CatchID, clear CatchID app data, uninstall the app, or Android otherwise removes the app data. CatchID does not maintain a server-side database of users' catch histories.</p>
         <p>Camera photos captured through CatchID may remain in the app's private files area. Share-card images are generated in the app cache. Gallery photos remain controlled by your selected gallery or document provider; CatchID stores the URI string and retained permission where applicable.</p>
-        <p>Render application logs are currently documented as available for up to 7 days on the current plan and are intended to contain privacy-safe operational metadata only.</p>
-        <p>OpenAI API request content may be retained for up to 30 days under OpenAI's standard API position for service provision and abuse monitoring, subject to legal and security exceptions, unless a different account setting applies.</p>
+        <p>Render Hobby dashboard logs are retained for 7 days and are intended to contain privacy-safe operational metadata only. No external Render log or metrics streams are configured.</p>
+        <p>CatchID sends <code>store: false</code> on OpenAI Responses API requests, but OpenAI standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <p>Firebase Analytics and Crashlytics data retention is controlled through Firebase/Google settings and service behaviour.</p>
       </section>
 
