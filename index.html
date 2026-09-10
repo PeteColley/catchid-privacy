@@ -96,10 +96,11 @@
   <main>
     <article>
       <h1>CatchID Privacy Policy</h1>
+<aside class="contact" role="note"><strong>Journal Protection is planned for CatchID 1.2.2.</strong> It is not yet available in the currently released CatchID 1.2.1. The account, cloud-backup and account-deletion service described below will apply when Journal Protection becomes available. You can continue using the core CatchID journal without signing in.</aside>
 
       <div class="meta">
-        <p><strong>Effective date:</strong> July 14, 2026</p>
-        <p><strong>Last updated:</strong> July 17, 2026</p>
+        <p><strong>Original policy effective date:</strong> July 14, 2026</p>
+        <p><strong>Last updated:</strong> September 10, 2026</p>
         <p><strong>App name:</strong> CatchID</p>
         <p><strong>Package:</strong> com.catchid.app</p>
         <p><strong>Developer/operator:</strong> Pete Colley</p>
@@ -110,7 +111,8 @@
         <h2>1. Overview</h2>
         <p>CatchID helps users identify fish from photographs and keep a personal catch log on their Android device.</p>
         <p>When you ask CatchID to identify a fish, the app sends the selected or newly captured photograph to the CatchID backend so the identification request can be processed. CatchID also lets you save catch details locally in the app, such as the photo, species result, date, location text, bait, and weight.</p>
-        <p>CatchID does not currently provide user accounts, cloud catch-history storage, subscriptions, or cross-device catch-log synchronisation.</p>
+        <p>You can record catches and use your CatchID journal on your device without signing in. Identification and adding a photo are optional. If you choose Journal Protection, CatchID uses Google sign-in and Firebase to back up your journal and catch photos and make protected data available to restore with the same Google account. Backup requires a working connection and successful completion; pending changes are not yet backed up.</p>
+        <p>Fish identifications are suggestions and can be wrong.</p>
       </section>
 
       <section>
@@ -134,7 +136,7 @@
           <li>confidence label;</li>
           <li>a local synced flag.</li>
         </ul>
-        <p>CatchID currently has no user account system, no cloud catch-history database, and no cross-device synchronisation. The operator cannot remotely view your locally saved catch log through a CatchID account or server-side catch database.</p>
+        <h3>Journal Protection account and backup data</h3><p>When you enable Journal Protection, Google and Firebase process your sign-in information, including your account identifier and the email address supplied by Google. CatchID associates your protected journal with a Firebase user identifier; it does not separately copy a Google display name or profile photograph into the journal. Google and Firebase may process provider profile information as part of sign-in. Firebase stores the catch details you save, including dates, species, locations you enter, bait, methods, weights and identification details, together with identifiers and information needed to process changes. Catch photos are stored as processed copies. Device-local photo addresses are not included in the journal backup.</p><p>We use this information to authenticate you and back up and restore your journal and photos. Cloud journal records and photos are restricted to the authenticated owner by access rules. They are not a public catch feed. The operator and service providers may access data where necessary to administer the service, provide support, handle deletion requests or meet legal obligations. Transfers use encrypted connections. Backup is not end-to-end encrypted against the service operator.</p>
 
         <h3>Sharing and Feedback</h3>
         <p>If you use Android sharing from CatchID, the app creates a share card and opens the Android share sheet. The content is sent only to the app or service you choose. CatchID does not automatically send shared catch cards to the CatchID backend.</p>
@@ -150,7 +152,7 @@
       <section>
         <h2>4. Firebase Analytics</h2>
         <p>CatchID uses Firebase Analytics to understand bounded app usage and feature reliability. Firebase Analytics collection is enabled in release builds.</p>
-        <p>CatchID deliberately sends only typed, bounded app events and parameters, such as identification started, identification completed, identification failed, result viewed, identify-another selected, and save-catch selected.</p>
+        <p>CatchID deliberately sends only typed, bounded app events and parameters, such as identification started, identification completed, identification failed, result viewed, identify-another selected, save-catch selected, catch editing/deletion/sharing, journal migration and verification outcomes, and insights screen usage.</p>
         <p>CatchID does not deliberately send fish species names, photographs, image URIs, exact catch locations, bait, weight, notes, email addresses, prompts, raw provider responses, tokens, API keys, arbitrary user identifiers, Firebase user IDs, or Firebase user properties to Firebase Analytics.</p>
         <p>Firebase Analytics may also automatically process app, device, session, approximate geography, and app-instance information as described by Google. CatchID disables advertising ID collection and ad-personalisation signals in the app manifest and does not use Firebase Analytics for advertising or ad personalisation.</p>
       </section>
@@ -167,7 +169,7 @@
         <h2>6. Why Information Is Used</h2>
         <ul>
           <li>providing fish identification requested by you;</li>
-          <li>saving and displaying your personal catch log locally on your device;</li>
+          <li>saving and displaying your personal catch journal locally on your device;</li><li>authenticating you and backing up and restoring your journal and photos when you choose Journal Protection;</li>
           <li>letting you share a catch card or send feedback when you choose to do so;</li>
           <li>maintaining security and reliability;</li>
           <li>diagnosing technical failures;</li>
@@ -184,15 +186,16 @@
         <h3>OpenAI</h3>
         <p>The CatchID backend uses the OpenAI API to process identification images and request content on behalf of CatchID. The OpenAI API key is kept on the backend and is not included in the Android app. OpenAI model-feedback sharing, evaluation/fine-tuning sharing, and API input/output sharing are disabled for CatchID. CatchID explicitly sends <code>store: false</code> on OpenAI Responses API requests and does not claim Zero Data Retention. Standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <h3>Firebase / Google</h3>
-        <p>CatchID uses Firebase Analytics and Firebase Crashlytics for bounded analytics and diagnostics. Firebase may process automatic SDK data needed to provide these services.</p>
+        <p>CatchID uses Firebase Authentication for optional Google sign-in, Cloud Firestore for protected journal records, and Cloud Storage for catch-photo backup and restore. CatchID also uses Firebase Analytics and Firebase Crashlytics for bounded analytics and diagnostics. Firebase processes the account, backup and SDK information needed to provide these services.</p>
         <h3>Android Platform and Selected Apps</h3>
         <p>CatchID uses Android system features such as the camera, document picker, app-private storage, browser intent for the privacy policy, email intent for feedback, and share sheet for sharing. If you choose a third-party app from Android's share sheet or email chooser, that app handles the content under its own terms and privacy policy.</p>
       </section>
 
       <section>
         <h2>8. Data Retention</h2>
-        <p>Saved catch records remain on your device until you delete them in CatchID, clear CatchID app data, uninstall the app, or Android otherwise removes the app data. CatchID does not maintain a server-side database of users' catch histories.</p>
-        <p>Camera photos captured through CatchID may remain in the app's private files area. Share-card images are generated in the app cache. Gallery photos remain controlled by your selected gallery or document provider; CatchID stores the URI string and retained permission where applicable.</p>
+        <p>Your local journal remains on your device until you remove it or Android removes the app data. Clearing app storage or uninstalling CatchID does not delete an existing protected cloud journal. Deleting a protected catch removes it from the journal and queues deletion of its cloud content and photo; the cloud change requires a successful connection. Minimal deletion markers and change receipts remain to prevent an older device or delayed retry from restoring a deleted catch. These records retain identifiers and revision information rather than the deleted catch details or photo. Account-wide deletion is a separate request.</p>
+        <p>CatchID keeps app-private copies of journal photos, including photos selected from a gallery or taken with the camera. Gallery originals remain controlled by your selected gallery or document provider. Share-card images are generated in the app cache.</p>
+        <p>Deleted backup photos may remain recoverable to authorized service administrators for seven days from deletion under the current Cloud Storage soft-delete policy. They cannot be permanently purged during that period. This seven-day period begins at object deletion and is separate from active removal and the time needed to verify and fulfil your request. An expected expiry date does not mean that expiry has already been observed. We do not restore those photos as part of normal service after an account-deletion request. Other provider records may have separately disclosed retention requirements; account removal is not a claim that every provider copy disappears immediately.</p>
         <p>Render Hobby dashboard logs are retained for 7 days and are intended to contain privacy-safe operational metadata only. No external Render log or metrics streams are configured.</p>
         <p>CatchID sends <code>store: false</code> on OpenAI Responses API requests, but OpenAI standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <p>Firebase Analytics and Crashlytics data retention is controlled through Firebase/Google settings and service behaviour.</p>
@@ -201,8 +204,14 @@
       <section>
         <h2>9. Deletion and User Control</h2>
         <p>You can delete individual catches inside CatchID. You can also remove CatchID's locally stored data using Android's application storage controls.</p>
-        <p>CatchID currently has no user account to delete. Because catch records are stored locally on your device, the operator cannot remotely view or delete those records from your device.</p>
-        <p>You may contact <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a> with privacy questions or deletion requests for data that CatchID or its service providers may process. Some provider records may be retained for security, abuse prevention, legal, or service-operation reasons, and CatchID cannot promise deletion outside its control where provider retention or legal requirements apply.</p>
+        <p>To request deletion of your CatchID sign-in account and its protected journal and photos, use <strong>Request account and cloud-data deletion</strong> in About &amp; Support or email <a href="mailto:colley.apps@gmail.com?subject=CatchID%20account%20and%20cloud-data%20deletion">colley.apps@gmail.com</a> from the Google email address used for Journal Protection, with the subject <strong>CatchID account and cloud-data deletion</strong>. You do not need to reinstall CatchID to send a request. We will send a confirmation message to the email address registered for Journal Protection and ask you to reply confirming the request. If you cannot access that address, contact us so we can assess how to verify ownership. Do not send passwords, sign-in or verification codes, tokens or photographs.</p>
+        <p>After verifying ownership, we stop the CatchID account from accessing its protected cloud data and remove its sign-in account, cloud catch records, photos, deletion markers and change receipts. We check the result before confirming active account and cloud-data removal. We separately explain any retained records, why they remain and when their retention is expected to end. A minimal account-erasure security record may be needed to prevent old sessions or uploads from restoring erased data; it does not contain your catch details or photos.</p>
+        <p>We aim to acknowledge deletion requests within three working days and normally complete removal of the active CatchID account and protected cloud journal within seven calendar days after verifying ownership. We confirm completion after checking the result. If we need further information or more time, we will explain why and respond within the applicable legal deadline.</p>
+        <p>We normally delete routine deletion-request correspondence 90 days after closing the request. We retain a minimal record of the request and its outcome for 12 months to demonstrate how it was handled. That record does not contain your catch details or photographs. Specific unresolved complaints or legal obligations may require limited information to be retained longer; we document the reason and review its continued necessity.</p>
+        <p>We may retain a minimal account-blocking record to prevent erased data from being recreated by old account sessions or delayed operations. We review its necessity after 30 days and at least every 90 days thereafter, and remove it when it is no longer needed.</p>
+        <p>The 12-month period starts when the request is closed. The first account-block review is 30 days after completed erasure; this is a necessity review, not an automatic deletion date. The block is separate from the completion record and contains no catch details or photos. These operator-record periods do not set the retention periods for separate provider logs, Analytics or Crashlytics records.</p>
+        <p>A CatchID deletion request does not delete your Google account, gallery originals or copies held only on your devices. Previously connected devices may still show local catches and pending work; account deletion does not remotely clear them. To remove local CatchID data and queued work, use Android Settings to clear CatchID&apos;s app storage on each device, or uninstall it. These local steps do not delete cloud backups and are not required to submit a cloud-deletion request. Photos and copies in a gallery, email app or share destination must be managed there. Creating another CatchID account is separate; an existing journal is not automatically moved to it.</p><p>See the <a href="https://petecolley.github.io/catchid-privacy/data-deletion.html">CatchID Data Deletion page</a> for request information.</p>
+        <p>For other data processed outside your device, email <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a>, describe the data or activity and give an approximate date. Do not send unnecessary sensitive content. We assess records we and our service providers can identify, request applicable provider deletion and explain any verified retention limits.</p>
       </section>
 
       <section>
@@ -224,7 +233,7 @@
 
       <section>
         <h2>13. International Processing</h2>
-        <p>CatchID's service providers may process information in countries outside your own country. Processing by those providers is subject to their contractual and legal safeguards. Specific provider processing regions have not all been confirmed.</p>
+        <p>Production journal records and backup photos are configured for storage in London (europe-west2). This does not mean all account, support, analytics, diagnostic or provider processing is confined to the UK. Service providers may process information in other countries under their contractual and legal safeguards.</p>
       </section>
 
       <section>

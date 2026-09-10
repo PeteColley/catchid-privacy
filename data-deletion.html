@@ -96,8 +96,10 @@
   <main>
     <article>
       <h1>CatchID Data Deletion</h1>
+<aside class="contact" role="note"><strong>Journal Protection is planned for CatchID 1.2.2.</strong> It is not yet available in the currently released CatchID 1.2.1. The account, cloud-backup and account-deletion service described below will apply when Journal Protection becomes available. You can continue using the core CatchID journal without signing in.</aside>
 
       <div class="meta">
+        <p><strong>Last updated:</strong> September 10, 2026</p>
         <p><strong>App:</strong> CatchID</p>
         <p><strong>Package:</strong> com.catchid.app</p>
         <p><strong>Developer/operator:</strong> Pete Colley</p>
@@ -106,8 +108,14 @@
 
       <section>
         <h2>Deletion Instructions</h2>
-        <p>CatchID does not currently provide user accounts, cloud catch-history storage, subscriptions, or cross-device catch-log synchronisation.</p>
-        <p>Your saved catch-log records remain locally on your Android device. Pete Colley cannot remotely access or delete locally stored catch-log records because they are not stored in a CatchID account or server-side catch database.</p>
+        <h3>Request account and protected cloud-data deletion</h3><p>To request deletion of your CatchID sign-in account and its protected journal and photos, use <strong>Request account and cloud-data deletion</strong> in About &amp; Support or email <a href="mailto:colley.apps@gmail.com?subject=CatchID%20account%20and%20cloud-data%20deletion">colley.apps@gmail.com</a> from the Google email address used for Journal Protection, with the subject <strong>CatchID account and cloud-data deletion</strong>. You do not need to reinstall CatchID to send a request. We will send a confirmation message to the email address registered for Journal Protection and ask you to reply confirming the request. If you cannot access that address, contact us so we can assess how to verify ownership. Do not send passwords, sign-in or verification codes, tokens or photographs.</p>
+        <p>After verifying ownership, we stop the CatchID account from accessing its protected cloud data and remove its sign-in account, cloud catch records, photos, deletion markers and change receipts. We check the result before confirming active account and cloud-data removal. We separately explain any retained records, why they remain and when their retention is expected to end. A minimal account-erasure security record may be needed to prevent old sessions or uploads from restoring erased data; it does not contain your catch details or photos.</p>
+        <p>We aim to acknowledge deletion requests within three working days and normally complete removal of the active CatchID account and protected cloud journal within seven calendar days after verifying ownership. We confirm completion after checking the result. If we need further information or more time, we will explain why and respond within the applicable legal deadline.</p>
+        <p>We normally delete routine deletion-request correspondence 90 days after closing the request. We retain a minimal record of the request and its outcome for 12 months to demonstrate how it was handled. That record does not contain your catch details or photographs. Specific unresolved complaints or legal obligations may require limited information to be retained longer; we document the reason and review its continued necessity.</p>
+        <p>We may retain a minimal account-blocking record to prevent erased data from being recreated by old account sessions or delayed operations. We review its necessity after 30 days and at least every 90 days thereafter, and remove it when it is no longer needed.</p>
+        <p>The 12-month period starts when the request is closed. The first account-block review is 30 days after completed erasure; this is a necessity review, not an automatic deletion date. The block is separate from the completion record and contains no catch details or photos. These operator-record periods do not set the retention periods for separate provider logs, Analytics or Crashlytics records.</p>
+        <p>A CatchID deletion request does not delete your Google account, gallery originals or copies held only on your devices. Previously connected devices may still show local catches and pending work; account deletion does not remotely clear them. To remove local CatchID data and queued work, use Android Settings to clear CatchID&apos;s app storage on each device, or uninstall it. These local steps do not delete cloud backups and are not required to submit a cloud-deletion request. Photos and copies in a gallery, email app or share destination must be managed there. Creating another CatchID account is separate; an existing journal is not automatically moved to it.</p>
+        <h3>Delete local data or individual catches</h3><p>Your local journal remains on your device until you remove it or Android removes the app data. Clearing app storage or uninstalling CatchID does not delete an existing protected cloud journal. Deleting a protected catch removes it from the journal and queues deletion of its cloud content and photo; the cloud change requires a successful connection. Minimal deletion markers and change receipts remain to prevent an older device or delayed retry from restoring a deleted catch. These records retain identifiers and revision information rather than the deleted catch details or photo. Account-wide deletion is a separate request.</p><p>The operator cannot remotely erase data held only on your devices. Clearing app storage or uninstalling does not erase the cloud backup.</p>
         <p>You can delete local CatchID data by:</p>
         <ul>
           <li>delete individual catches inside CatchID;</li>
@@ -118,12 +126,7 @@
 
       <section>
         <h2>Requesting Deletion of Data Processed Outside Your Device</h2>
-        <p>To request deletion of data that may have been processed outside your device, email <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a>.</p>
-        <div class="contact">
-          <p><strong>Suggested subject:</strong> CatchID data deletion request</p>
-          <p>In your message, describe the data or activity concerned and provide an approximate date. Please do not send a fish photograph or other unnecessary sensitive content unless CatchID support specifically asks for it.</p>
-        </div>
-        <p>CatchID can attempt to identify and delete records that are reasonably possible to locate and within CatchID's control, such as support emails you send directly to CatchID and any related operator-controlled records.</p>
+        <p>For other data processed outside your device, email <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a>, describe the data or activity and give an approximate date. Do not send unnecessary sensitive content. We assess records we and our service providers can identify, request applicable provider deletion and explain any verified retention limits. Read the <a href="https://petecolley.github.io/catchid-privacy/">CatchID Privacy Policy</a> for the separate identification, support, analytics and diagnostic disclosures.</p>
       </section>
 
       <section>
@@ -134,6 +137,7 @@
 
       <section>
         <h2>Provider and Security Retention</h2>
+        <p>Deleted backup photos may remain recoverable to authorized service administrators for seven days from deletion under the current Cloud Storage soft-delete policy. They cannot be permanently purged during that period. This seven-day period begins at object deletion and is separate from active removal and the time needed to verify and fulfil your request. An expected expiry date does not mean that expiry has already been observed. We do not restore those photos as part of normal service after an account-deletion request. Other provider records may have separately disclosed retention requirements; account removal is not a claim that every provider copy disappears immediately.</p>
         <p>Some provider or security records may remain temporarily because of operational, abuse-prevention, legal, or service-provider retention requirements. CatchID does not promise immediate deletion of records outside its direct control where provider retention or legal requirements apply.</p>
         <p>Render Hobby dashboard logs are retained for 7 days and are intended to contain privacy-safe operational metadata only. No external Render log or metrics streams are configured.</p>
         <p>CatchID sends <code>store: false</code> on OpenAI Responses API requests, but OpenAI standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
