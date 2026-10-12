@@ -100,7 +100,7 @@
 
       <div class="meta">
         <p><strong>Original policy effective date:</strong> July 14, 2026</p>
-        <p><strong>Last updated:</strong> September 18, 2026</p>
+        <p><strong>Last updated:</strong> October 12, 2026</p>
         <p><strong>App name:</strong> CatchID</p>
         <p><strong>Package:</strong> com.catchid.app</p>
         <p><strong>Developer/operator:</strong> Pete Colley</p>
@@ -113,6 +113,7 @@
         <p>When you ask CatchID to identify a fish, the app sends the selected or newly captured photograph to the CatchID backend so the identification request can be processed. CatchID also lets you save catch details locally in the app, such as the photo, species result, date, location text, bait, and weight.</p>
         <p>You can record catches and use your CatchID journal on your device without signing in. Identification and adding a photo are optional. If you choose Journal Protection, CatchID uses Google sign-in and Firebase to back up your journal and catch photos and make protected data available to restore with the same Google account. Backup requires a working connection and successful completion; pending changes are not yet backed up.</p>
         <p>Fish identifications are suggestions and can be wrong.</p>
+        <p>Optional website analytics for the public CatchID website at <a href="https://catchid.app">catchid.app</a> are described below. Where this option is available, website analytics is off unless you accept it. Analytics is not required to use the website, and you can reject it.</p>
       </section>
 
       <section>
@@ -158,6 +159,30 @@
       </section>
 
       <section>
+        <h2 id="website-analytics">4a. Google Analytics on the CatchID website</h2>
+        <p>This section describes optional Google Analytics 4 (GA4) for the public CatchID website. It applies when the website offers the analytics choice described here and is separate from Firebase Analytics used by the Android app.</p>
+
+        <h3>Information used after consent</h3>
+        <p>After you explicitly accept website analytics, GA4 may process ordinary website usage information, depending on the interaction and applicable measurement settings, including:</p>
+        <ul>
+          <li>page views and the pages or URLs visited;</li>
+          <li>referrer and acquisition information, such as the site or campaign that brought you to CatchID;</li>
+          <li>interactions measured through GA4 Enhanced Measurement, such as scrolling and outbound-link clicks;</li>
+          <li>browser, device and session information;</li>
+          <li>approximate geographic information derived by Google, including from the IP address used to connect to its service;</li>
+          <li>Google Analytics cookies or similar identifiers used to distinguish visits and sessions.</li>
+        </ul>
+        <p>CatchID does not deliberately send fish species, catch photographs, catch locations, catch weights, bait/lure/fly information, personal journal contents, Firebase user IDs, CatchID account identifiers, email addresses, Google account information, advertising IDs or custom user IDs to website analytics.</p>
+        <p>CatchID does not use website analytics for advertising or ad personalisation. The website configuration disables Google signals and ad-personalisation signals and does not add custom user IDs.</p>
+
+        <h3>Your website analytics choice</h3>
+        <p>Website analytics is disabled by default. Before you accept, CatchID does not load GA4, request its code from Google, initialise it or create its analytics cookies. You can choose <strong>Accept analytics</strong> or <strong>Reject analytics</strong>. Your choice is stored locally in your browser on that device. A saved acceptance allows GA4 to load on later visits; a saved rejection prevents CatchID from loading it on later visits.</p>
+        <p>You can reopen <strong>Analytics choices</strong> in the website footer and change your decision. If your browser cannot save the choice, the website explains this and keeps analytics off for that page. Clearing browser storage or using another browser or device may mean you are asked again.</p>
+        <p>Withdrawing consent applies to future collection. When you reject analytics after accepting it, CatchID disables further collection and attempts to remove its first-party <code>_ga</code> and <code>_ga_*</code> Google Analytics cookies. Measurements already queued while consent was granted may complete after rejection. Withdrawing consent or removing cookies does not recall or automatically erase measurements Google has already received.</p>
+        <p>These website controls are separate from CatchID account and cloud-data deletion. For questions about data already processed, use the contact route in section 9.</p>
+      </section>
+
+      <section>
         <h2>5. Firebase Crashlytics</h2>
         <p>CatchID uses Firebase Crashlytics to receive crash and non-fatal diagnostic reports. Crashlytics collection is enabled in release builds.</p>
         <p>Crashlytics may collect crash stack traces, relevant application state, device/app metadata, a Crashlytics installation UUID, Firebase installation information, Firebase Sessions quality metadata, and Analytics breadcrumb logs where applicable.</p>
@@ -174,6 +199,7 @@
           <li>maintaining security and reliability;</li>
           <li>diagnosing technical failures;</li>
           <li>understanding bounded app usage and app health;</li>
+          <li>with website analytics consent, understanding how visitors find the CatchID website, understanding aggregate website usage, and evaluating which acquisition channels or pages are useful;</li>
           <li>preventing abuse and managing service performance.</li>
         </ul>
         <p>CatchID does not sell personal data and does not use collected data for advertising or ad personalisation.</p>
@@ -187,6 +213,7 @@
         <p>The CatchID backend uses the OpenAI API to process identification images and request content on behalf of CatchID. The OpenAI API key is kept on the backend and is not included in the Android app. OpenAI model-feedback sharing, evaluation/fine-tuning sharing, and API input/output sharing are disabled for CatchID. CatchID explicitly sends <code>store: false</code> on OpenAI Responses API requests and does not claim Zero Data Retention. Standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <h3>Firebase / Google</h3>
         <p>CatchID uses Firebase Authentication for optional Google sign-in, Cloud Firestore for protected journal records, and Cloud Storage for catch-photo backup and restore. CatchID also uses Firebase Analytics and Firebase Crashlytics for bounded analytics and diagnostics. Firebase processes the account, backup and SDK information needed to provide these services.</p>
+        <p>For the optional website analytics described in <a href="#website-analytics">section 4a</a>, Google also provides Google Analytics after the visitor consents. This is separate from the Firebase services used by the Android app. Google processes website analytics information under its service terms and privacy practices; see <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites or apps that use its services</a>. This processing is not necessarily confined to the UK, as explained in section 13.</p>
         <h3>Android Platform and Selected Apps</h3>
         <p>CatchID uses Android system features such as the camera, document picker, app-private storage, browser intent for the privacy policy, email intent for feedback, and share sheet for sharing. If you choose a third-party app from Android's share sheet or email chooser, that app handles the content under its own terms and privacy policy.</p>
       </section>
@@ -199,6 +226,7 @@
         <p>Render Hobby dashboard logs are retained for 7 days and are intended to contain privacy-safe operational metadata only. No external Render log or metrics streams are configured.</p>
         <p>CatchID sends <code>store: false</code> on OpenAI Responses API requests, but OpenAI standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <p>Firebase Analytics and Crashlytics data retention is controlled through Firebase/Google settings and service behaviour.</p>
+        <p>For optional website analytics, retention is controlled through the relevant Google Analytics settings and Google's service behaviour. Retention of event-level information and aggregate reports can differ. Withdrawing website consent does not itself change the retention of measurements already received by Google.</p>
       </section>
 
       <section>
@@ -224,6 +252,7 @@
         <h2>11. Data Sharing</h2>
         <p>CatchID does not sell personal data.</p>
         <p>CatchID provides information to service providers needed to operate the app, process identification requests, maintain reliability, prevent abuse, and meet legal obligations. These providers are not used by CatchID to independently market to users.</p>
+        <p>If you accept optional website analytics, website usage information is also shared with Google to provide the analytics described in <a href="#website-analytics">section 4a</a>. CatchID uses this information to understand website usage and acquisition, not for advertising or ad personalisation.</p>
       </section>
 
       <section>
