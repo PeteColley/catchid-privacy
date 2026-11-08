@@ -100,7 +100,7 @@
 
       <div class="meta">
         <p><strong>Original policy effective date:</strong> July 14, 2026</p>
-        <p><strong>Last updated:</strong> October 12, 2026</p>
+        <p><strong>Last updated:</strong> November 8, 2026</p>
         <p><strong>App name:</strong> CatchID</p>
         <p><strong>Package:</strong> com.catchid.app</p>
         <p><strong>Developer/operator:</strong> Pete Colley</p>
@@ -113,6 +113,7 @@
         <p>When you ask CatchID to identify a fish, the app sends the selected or newly captured photograph to the CatchID backend so the identification request can be processed. CatchID also lets you save catch details locally in the app, such as the photo, species result, date, location text, bait, and weight.</p>
         <p>You can record catches and use your CatchID journal on your device without signing in. Identification and adding a photo are optional. If you choose Journal Protection, CatchID uses Google sign-in and Firebase to back up your journal and catch photos and make protected data available to restore with the same Google account. Backup requires a working connection and successful completion; pending changes are not yet backed up.</p>
         <p>Fish identifications are suggestions and can be wrong.</p>
+        <p><strong>Advertising disclosures in this policy apply to CatchID versions that include Google Mobile Ads.</strong> They are published in preparation for the upcoming ad-supported CatchID Free release. The current Play production version, 1.2.12, does not display adverts; older versions may not include advertising. Optional length and notes fields are available only in versions that support them.</p>
         <p>Optional website analytics for the public CatchID website at <a href="https://catchid.app">catchid.app</a> are described below. Where this option is available, website analytics is off unless you accept it. Analytics is not required to use the website, and you can reject it.</p>
       </section>
 
@@ -132,12 +133,14 @@
           <li>location text entered by you;</li>
           <li>bait, lure, or fly text entered by you;</li>
           <li>weight value and weight unit entered by you;</li>
+          <li>optional fish length and length unit, in versions that support them;</li>
+          <li>optional personal notes, in versions that support them;</li>
           <li>species name, if one is saved;</li>
           <li>identification source;</li>
           <li>confidence label;</li>
           <li>a local synced flag.</li>
         </ul>
-        <h3>Journal Protection account and backup data</h3><p>When you enable Journal Protection, Google and Firebase process your sign-in information, including your account identifier and the email address supplied by Google. CatchID associates your protected journal with a Firebase user identifier; it does not separately copy a Google display name or profile photograph into the journal. Google and Firebase may process provider profile information as part of sign-in. Firebase stores the catch details you save, including dates, species, locations you enter, bait, methods, weights and identification details, together with identifiers and information needed to process changes. Catch photos are stored as processed copies. Device-local photo addresses are not included in the journal backup.</p><p>We use this information to authenticate you and back up and restore your journal and photos. Cloud journal records and photos are restricted to the authenticated owner by access rules. They are not a public catch feed. The operator and service providers may access data where necessary to administer the service, provide support, handle deletion requests or meet legal obligations. Transfers use encrypted connections. Backup is not end-to-end encrypted against the service operator.</p>
+        <h3>Journal Protection account and backup data</h3><p>When you enable Journal Protection, Google and Firebase process your sign-in information, including your account identifier and the email address supplied by Google. CatchID associates your protected journal with a Firebase user identifier; it does not separately copy a Google display name or profile photograph into the journal. Google and Firebase may process provider profile information as part of sign-in. Firebase stores the catch details you save, including dates, species, locations you enter, bait, methods, weights and identification details, together with identifiers and information needed to process changes. In versions that support them, protected records may also include optional fish length, length unit and personal notes that you save; historical catches need not contain these fields. Catch photos are stored as processed copies. Device-local photo addresses are not included in the journal backup.</p><p>We use this information to authenticate you and back up and restore your journal and photos. Cloud journal records and photos are restricted to the authenticated owner by access rules. They are not a public catch feed. The operator and service providers may access data where necessary to administer the service, provide support, handle deletion requests or meet legal obligations. Transfers use encrypted connections. Backup is not end-to-end encrypted against the service operator.</p>
 
         <h3>Sharing and Feedback</h3>
         <p>If you use Android sharing from CatchID, the app creates a share card and opens the Android share sheet. The content is sent only to the app or service you choose. CatchID does not automatically send shared catch cards to the CatchID backend.</p>
@@ -154,8 +157,9 @@
         <h2>4. Firebase Analytics</h2>
         <p>CatchID uses Firebase Analytics to understand bounded app usage and feature reliability. Firebase Analytics collection is enabled in release builds.</p>
         <p>CatchID deliberately sends only typed, bounded app events and parameters, such as identification started, identification completed, identification failed, result viewed, identify-another selected, save-catch selected, catch editing/deletion/sharing, journal migration and verification outcomes, and insights screen usage.</p>
-        <p>CatchID does not deliberately send fish species names, photographs, image URIs, exact catch locations, bait, weight, notes, email addresses, prompts, raw provider responses, tokens, API keys, arbitrary user identifiers, Firebase user IDs, or Firebase user properties to Firebase Analytics.</p>
+        <p>CatchID does not deliberately send fish species names, photographs, image URIs, exact catch locations, bait, weight, length, notes, email addresses, prompts, raw provider responses, tokens, API keys, arbitrary user identifiers, Firebase user IDs, or Firebase user properties to Firebase Analytics.</p>
         <p>Firebase Analytics may also automatically process app, device, session, approximate geography, and app-instance information as described by Google. CatchID disables advertising ID collection and ad-personalisation signals in the app manifest and does not use Firebase Analytics for advertising or ad personalisation.</p>
+        <p>Adding advertising does not change these limits on CatchID's deliberately emitted analytics payloads. Google SDKs may generate automatic advertising measurement and diagnostics. The advertising privacy choices described in section 4b are separate from Firebase Analytics collection; they are not a switch for these bounded product analytics.</p>
       </section>
 
       <section>
@@ -183,11 +187,36 @@
       </section>
 
       <section>
+        <h2 id="android-advertising">4b. Advertising and privacy choices in the CatchID Android app</h2>
+        <h3>Advertising and Google's processing</h3>
+        <p>Ad-supported versions of CatchID Free use Google AdMob and the Google Mobile Ads SDK. Formats may include banners, native ads displayed alongside app content, and occasional full-screen interstitial ads.</p>
+        <p>The Google Mobile Ads SDK automatically collects and shares advertising-related information. Depending on the device, settings and applicable ad-serving mode, this can include:</p>
+        <ul>
+          <li>your IP address, which Google may use to estimate general location;</li>
+          <li>app and ad interactions, such as app launches, taps and video views;</li>
+          <li>app and SDK diagnostic or performance information, such as launch time, hangs and energy use;</li>
+          <li>device, app and applicable account-related identifiers, such as an app set ID or identifiers related to signed-in accounts.</li>
+        </ul>
+        <p>Google uses this information for advertising, ad measurement and analytics, and fraud/abuse prevention and security. CatchID's current app configuration prevents collection of the Android advertising ID. This does not prevent all other identifiers or SDK data from being processed. See Google's <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Mobile Ads SDK data disclosure</a>.</p>
+
+        <h3>Your private catch journal is not advertising targeting data</h3>
+        <p><strong>CatchID does not deliberately supply private catch or journal content to Google ad requests, targeting keywords or custom advertising parameters.</strong> This includes fish species, identification results or confidence, catch locations or location keys, photos or image URIs, notes, weight, length, bait/lure/fly, fishing methods or details, timestamps tied to a catch record, catch IDs and other private journal text.</p>
+        <p>CatchID makes standard ad requests without adding custom targeting parameters. This boundary does not stop the SDK's own processing described above, and does not mean that Google receives no information.</p>
+
+        <h3>Consent and privacy choices</h3>
+        <p>CatchID uses Google's User Messaging Platform (UMP) to request current consent/privacy status and display Google's required privacy messages where applicable. CatchID does not request ads until UMP reports that ads may be requested. Where Google requires a privacy-options entry point, <strong>Privacy choices</strong> appears in <strong>About &amp; Support</strong>, so you can revisit the applicable advertising options.</p>
+        <p>Declining personalised advertising does not necessarily mean you will see no adverts. Depending on applicable requirements, your choices and Google's ad-serving eligibility, Google may serve personalised, non-personalised or limited ads. Technical ad delivery can still involve processing such as an IP address to send an ad to your device. CatchID follows Google's UMP and advertising systems; it does not independently infer your consent or select an ad-serving mode from a simple accept/decline choice. See Google's <a href="https://developers.google.com/admob/android/privacy/ad-serving-modes">explanation of ad-serving modes</a>.</p>
+        <p><strong>European users:</strong> CatchID has configured Google's European privacy messaging for applicable users, including those in the European Economic Area and the UK. The message provides options to consent, decline consent and manage options where applicable.</p>
+        <p><strong>US state privacy:</strong> CatchID uses Google's US state privacy messaging for states supported by Google's platform, with applicable opt-out and privacy controls. The message is configured for all current and future supported US states. Available options depend on Google's messaging and the user's applicable region.</p>
+        <p>These Android advertising choices are separate from the website analytics controls in section 4a and the Firebase Analytics practices in section 4.</p>
+      </section>
+
+      <section>
         <h2>5. Firebase Crashlytics</h2>
         <p>CatchID uses Firebase Crashlytics to receive crash and non-fatal diagnostic reports. Crashlytics collection is enabled in release builds.</p>
         <p>Crashlytics may collect crash stack traces, relevant application state, device/app metadata, a Crashlytics installation UUID, Firebase installation information, Firebase Sessions quality metadata, and Analytics breadcrumb logs where applicable.</p>
         <p>CatchID's developer-defined Crashlytics custom keys are limited to bounded diagnostic values: operation, error category, failure stage, safe code, local correlation ID where applicable, backend correlation ID where applicable, app version, and app build.</p>
-        <p>CatchID does not deliberately attach photographs, image URIs, species names, exact catch locations, bait, weight, notes, prompts, raw provider responses, request bodies, tokens, API keys, Firebase user IDs, Firebase user properties, or arbitrary exception messages as Crashlytics custom keys.</p>
+        <p>CatchID does not deliberately attach photographs, image URIs, species names, exact catch locations, bait, weight, length, notes, prompts, raw provider responses, request bodies, tokens, API keys, Firebase user IDs, Firebase user properties, or arbitrary exception messages as Crashlytics custom keys.</p>
       </section>
 
       <section>
@@ -199,10 +228,11 @@
           <li>maintaining security and reliability;</li>
           <li>diagnosing technical failures;</li>
           <li>understanding bounded app usage and app health;</li>
+          <li>in ad-supported versions, delivering and measuring adverts, preventing advertising fraud and abuse, and managing applicable advertising privacy choices, using the advertising-related information described in section 4b;</li>
           <li>with website analytics consent, understanding how visitors find the CatchID website, understanding aggregate website usage, and evaluating which acquisition channels or pages are useful;</li>
           <li>preventing abuse and managing service performance.</li>
         </ul>
-        <p>CatchID does not sell personal data and does not use collected data for advertising or ad personalisation.</p>
+        <p>CatchID does not sell your private catch or journal content or deliberately use it to target adverts. Google Mobile Ads processes its own advertising-related information as described in section 4b; any ad personalisation is governed by Google's advertising/consent systems and your applicable choices. CatchID does not use website analytics for advertising or ad personalisation.</p>
       </section>
 
       <section>
@@ -214,6 +244,8 @@
         <h3>Firebase / Google</h3>
         <p>CatchID uses Firebase Authentication for optional Google sign-in, Cloud Firestore for protected journal records, and Cloud Storage for catch-photo backup and restore. CatchID also uses Firebase Analytics and Firebase Crashlytics for bounded analytics and diagnostics. Firebase processes the account, backup and SDK information needed to provide these services.</p>
         <p>For the optional website analytics described in <a href="#website-analytics">section 4a</a>, Google also provides Google Analytics after the visitor consents. This is separate from the Firebase services used by the Android app. Google processes website analytics information under its service terms and privacy practices; see <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites or apps that use its services</a>. This processing is not necessarily confined to the UK, as explained in section 13.</p>
+        <h3>Google AdMob and User Messaging Platform</h3>
+        <p>In ad-supported Android versions, Google provides AdMob and the Google Mobile Ads SDK for advertising, and UMP for applicable privacy messages and choices. These services process advertising-related information and privacy-choice signals as described in <a href="#android-advertising">section 4b</a>. They are separate from CatchID's Firebase account, journal backup, product analytics and crash-reporting uses. Read <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites or apps that use its services</a>.</p>
         <h3>Android Platform and Selected Apps</h3>
         <p>CatchID uses Android system features such as the camera, document picker, app-private storage, browser intent for the privacy policy, email intent for feedback, and share sheet for sharing. If you choose a third-party app from Android's share sheet or email chooser, that app handles the content under its own terms and privacy policy.</p>
       </section>
@@ -226,6 +258,7 @@
         <p>Render Hobby dashboard logs are retained for 7 days and are intended to contain privacy-safe operational metadata only. No external Render log or metrics streams are configured.</p>
         <p>CatchID sends <code>store: false</code> on OpenAI Responses API requests, but OpenAI standard abuse-monitoring records may still remain for up to 30 days, subject to legal and security exceptions.</p>
         <p>Firebase Analytics and Crashlytics data retention is controlled through Firebase/Google settings and service behaviour.</p>
+        <p>Retention of Google Mobile Ads and UMP information is governed by Google's service behaviour, applicable terms and legal obligations. Changing advertising privacy choices does not automatically erase information Google has already processed. CatchID does not promise a fixed retention period for those provider records; see <a href="https://policies.google.com/technologies/retention">Google's retention information</a>.</p>
         <p>For optional website analytics, retention is controlled through the relevant Google Analytics settings and Google's service behaviour. Retention of event-level information and aggregate reports can differ. Withdrawing website consent does not itself change the retention of measurements already received by Google.</p>
       </section>
 
@@ -240,6 +273,8 @@
         <p>The 12-month period starts when the request is closed. The first account-block review is 30 days after completed erasure; this is a necessity review, not an automatic deletion date. The block is separate from the completion record and contains no catch details or photos. These operator-record periods do not set the retention periods for separate provider logs, Analytics or Crashlytics records.</p>
         <p>A CatchID deletion request does not delete your Google account, gallery originals or copies held only on your devices. Previously connected devices may still show local catches and pending work; account deletion does not remotely clear them. To remove local CatchID data and queued work, use Android Settings to clear CatchID&apos;s app storage on each device, or uninstall it. These local steps do not delete cloud backups and are not required to submit a cloud-deletion request. Photos and copies in a gallery, email app or share destination must be managed there. Creating another CatchID account is separate; an existing journal is not automatically moved to it.</p><p>See the <a href="https://petecolley.github.io/catchid-privacy/data-deletion.html">CatchID Data Deletion page</a> for request information.</p>
         <p>For other data processed outside your device, email <a href="mailto:colley.apps@gmail.com">colley.apps@gmail.com</a>, describe the data or activity and give an approximate date. Do not send unnecessary sensitive content. We assess records we and our service providers can identify, request applicable provider deletion and explain any verified retention limits.</p>
+        <h3>Advertising privacy choices</h3>
+        <p>In ad-supported versions, you can revisit applicable advertising options through <strong>Privacy choices</strong> in <strong>About &amp; Support</strong> when Google requires that entry point. Google's UMP/privacy messaging handles these choices. Changes govern future ad processing and serving according to Google's applicable systems; they do not erase previously processed information held under provider retention or legal obligations. CatchID account and cloud-journal deletion is separate and does not delete Google's advertising records.</p>
       </section>
 
       <section>
@@ -250,8 +285,9 @@
 
       <section>
         <h2>11. Data Sharing</h2>
-        <p>CatchID does not sell personal data.</p>
-        <p>CatchID provides information to service providers needed to operate the app, process identification requests, maintain reliability, prevent abuse, and meet legal obligations. These providers are not used by CatchID to independently market to users.</p>
+        <p>CatchID does not sell your private catch or journal content.</p>
+        <p>CatchID provides information to service providers needed to operate the app, process identification requests, provide optional journal backup, maintain reliability, prevent abuse, and meet legal obligations.</p>
+        <p>When advertising is enabled, Google receives and processes the SDK and advertising-related information described in <a href="#android-advertising">section 4b</a> for its supported advertising, analytics, fraud-prevention, security and related purposes, subject to applicable choices and settings. Standard ad requests still involve this data sharing even though CatchID does not deliberately attach private catch or journal fields to them.</p>
         <p>If you accept optional website analytics, website usage information is also shared with Google to provide the analytics described in <a href="#website-analytics">section 4a</a>. CatchID uses this information to understand website usage and acquisition, not for advertising or ad personalisation.</p>
       </section>
 
@@ -262,7 +298,7 @@
 
       <section>
         <h2>13. International Processing</h2>
-        <p>Production journal records and backup photos are configured for storage in London (europe-west2). This does not mean all account, support, analytics, diagnostic or provider processing is confined to the UK. Service providers may process information in other countries under their contractual and legal safeguards.</p>
+        <p>Production journal records and backup photos are configured for storage in London (europe-west2). This does not mean all account, support, analytics, diagnostic, advertising or privacy-message processing is confined to the UK. Service providers, including Google Mobile Ads and UMP, may process information internationally under their contractual and legal safeguards. See <a href="https://policies.google.com/privacy/frameworks">Google's information about international data-transfer safeguards</a>.</p>
       </section>
 
       <section>
